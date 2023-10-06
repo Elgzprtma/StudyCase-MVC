@@ -45,10 +45,10 @@
                
                 if ($tglPinjam >= $tglKembali) {
                     echo '<span class="badge bg-success">Sudah Kembali</span>';
-                    $showEditButton = false; // Set variabel $showEditButton menjadi false jika sudah kembali.
-                } else {
+                    $showEditButton = false; 
+                    } else{
                     echo '<span class="badge bg-danger">Belum Kembali</span>';
-                    $showEditButton = true; // Set variabel $showEditButton menjadi true jika belum kembali.
+                    $showEditButton = true; 
                 }
                 ?>
             </td>

@@ -4,7 +4,7 @@
     <div class="class-body">
         <div class="form-group mb-3">
             <label for="nama_peminjam">Nama Peminjam</label>
-            <input type="text" class="form-control" name="nama_peminjam">
+            <input type="text" class="form-control"  name="nama_peminjam">
 
         </div>
         <div class="form-group mb-3">
