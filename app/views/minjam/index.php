@@ -30,6 +30,7 @@
         </thead>
         <tbody>
         <?php $no=1; ?>
+        <?php date_default_timezone_set("asia/jakarta"); ?>
         <?php foreach ($data['minjam'] as $row) :?>
         <tr>
             <td><?= $no; ?></td>
@@ -40,10 +41,11 @@
             <td><?= $row['tgl_kembali']; ?></td>
             <td>
                 <?php
-                $tglPinjam = strtotime($row['tgl_pinjam']);
-                $tglKembali = strtotime($row['tgl_kembali']);
+                $tglPinjam = $row['tgl_pinjam'];
+                $tglKembali = $row['tgl_kembali'];
+                $today = date('Y-m-d H:i:s');
                
-                if ($tglPinjam >= $tglKembali) {
+                if ($tglPinjam >= $tglKembali || $today >= $tglKembali) {
                     echo '<span class="badge bg-success">Sudah Kembali</span>';
                     $showEditButton = false; 
                     } else{
